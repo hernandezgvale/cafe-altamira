@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
   <!-- ============================================================
        TODO G1 (parte 1): el PRIMER elemento del body debe ser un enlace
        "Saltar al contenido" con class="saltar" que lleve a #contenido.
@@ -18,7 +19,8 @@
        - <nav> con aria-label distingue este menú de otros menús de la página.
        - Los enlaces van en una lista <ul>: el lector anuncia "lista, 4 elementos".
        ============================================================ -->
-  <header class="encabezado">
+  <header c
+  lass="encabezado">
     <a class="logo" href="index.html">
       <img src="img/grano.svg" alt="" width="28" height="28">
       Café Altamira
@@ -35,12 +37,12 @@
 
   <!-- TODO G1 (parte 2): este div es el contenido principal.
        Conviértelo en <main id="contenido"> (y cierra con </main>). -->
-  <div class="contenido">
+ <main id="contenido">
 
     <!-- TODO G1 (parte 3): el título de la portada es un div con letra grande.
          Debe ser el ÚNICO <h1> de la página. -->
     <div class="hero">
-      <div class="titulo-grande">Café Altamira</div>
+    <h1 class="titulo-grande">Café Altamira</h1>  
       <p>Cafés especiales cultivados a 1.800 metros en las montañas de Risaralda.</p>
       <a class="boton" href="#cafes">Ver nuestros cafés</a>
     </div>
@@ -51,29 +53,36 @@
          - Cada producto debe ser un <article> con el nombre en <h3>.
          - Cada imagen necesita un alt que describa el producto (no el nombre del archivo).
          ============================================================ -->
-    <div class="seccion" id="cafes">
-      <div class="subtitulo">Nuestros cafés</div>
-      <div class="productos">
-        <div class="producto">
-          <img src="img/cafe-clasico.svg" width="300" height="220">
-          <div class="nombre">Altamira Clásico</div>
-          <p>Origen: Santuario, Risaralda · Notas: chocolate y panela.</p>
-          <p class="precio">$32.000 · 500 g</p>
-        </div>
-        <div class="producto">
-          <img src="img/cafe-geisha.svg" width="300" height="220">
-          <div class="nombre">Geisha de Altura</div>
-          <p>Origen: Apía, Risaralda · Notas: jazmín y durazno.</p>
-          <p class="precio">$58.000 · 250 g</p>
-        </div>
-        <div class="producto">
-          <img src="img/cafe-honey.svg" width="300" height="220">
-          <div class="nombre">Honey La Esmeralda</div>
-          <p>Origen: Belén de Umbría · Notas: miel y frutos rojos.</p>
-          <p class="precio">$41.000 · 500 g</p>
-        </div>
-      </div>
-    </div>
+ 
+<section class="seccion" id="cafes">
+  <h2 class="subtitulo">Nuestros cafés</h2>
+
+  <div class="productos">
+    <article class="producto">
+      <img src="img/cafe-clasico.svg" width="300" height="220"
+           alt="Bolsa de café Altamira Clásico de 500 gramos">
+      <h3>Altamira Clásico</h3>
+      <p>Origen: Santuario, Risaralda · Notas: chocolate y panela.</p>
+      <p class="precio">$32.000 · 500 g</p>
+    </article>
+
+    <article class="producto">
+      <img src="img/cafe-geisha.svg" width="300" height="220"
+           alt="Bolsa de café Geisha de Altura de 250 gramos">
+      <h3>Geisha de Altura</h3>
+      <p>Origen: Apía, Risaralda · Notas: jazmín y durazno.</p>
+      <p class="precio">$58.000 · 250 g</p>
+    </article>
+
+    <article class="producto">
+      <img src="img/cafe-honey.svg" width="300" height="220"
+           alt="Bolsa de café Honey La Esmeralda de 500 gramos">
+      <h3>Honey La Esmeralda</h3>
+      <p>Origen: Belén de Umbría · Notas: miel y frutos rojos.</p>
+      <p class="precio">$41.000 · 500 g</p>
+    </article>
+  </div>
+</section>
 
     <!-- ============================================================
          EJEMPLO RESUELTO 2 · Sección con figura
@@ -107,7 +116,7 @@
       </div>
     </div>
 
-  </div>
+  </main>
 
   <!-- ============================================================
        TODO G4 · Pie de página
