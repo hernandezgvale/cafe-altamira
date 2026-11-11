@@ -19,8 +19,7 @@
        - <nav> con aria-label distingue este menú de otros menús de la página.
        - Los enlaces van en una lista <ul>: el lector anuncia "lista, 4 elementos".
        ============================================================ -->
-  <header c
-  lass="encabezado">
+  <header class="encabezado">
     <a class="logo" href="index.html">
       <img src="img/grano.svg" alt="" width="28" height="28">
       Café Altamira
@@ -108,13 +107,21 @@
          - El campo de correo necesita: <label for="...">, type="email", id y required.
          - El "botón" es un div con onclick: cámbialo por <button type="submit">.
          ============================================================ -->
-    <div class="seccion" id="suscripcion">
-      <div class="subtitulo">Recibe nuestras novedades</div>
-      <div class="formulario">
-        <input type="text" placeholder="Tu correo">
-        <div class="boton" onclick="alert('¡Gracias!')">Suscribirme</div>
-      </div>
-    </div>
+   <section class="seccion" id="suscripcion">
+  <h2 class="subtitulo">Recibe nuestras novedades</h2>
+
+  <form class="formulario">
+    <label for="correo">Correo electrónico:</label>
+    <input
+      type="email"
+      id="correo"
+      name="correo"
+      placeholder="Tu correo"
+      required
+    >
+    <button type="submit" class="boton">Suscribirme</button>
+  </form>
+</section>
 
   </main>
 
